@@ -1,0 +1,261 @@
+/* 📌 Main Layout Fix */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything */
+  }
+  
+  /* 📌 Bookings Container */
+  .bookings-container {
+    width: 100%;
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* 📌 Booking Form */
+  .booking-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+  
+  .booking-form h2 {
+    margin-bottom: 15px;
+    color: #2a5db0;
+    font-size: 20px;
+  }
+  
+  .booking-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .booking-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .booking-form input:focus {
+    border-color: #2a5db0;
+    outline: none;
+  }
+  
+  .booking-form button {
+    background-color: #2a5db0;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .booking-form button:hover {
+    background-color: #1e4a8d;
+  }
+  
+  /* 📌 Booking List */
+  .booking-list {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .booking-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 5px solid #2a5db0;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .booking-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* 📌 Messages */
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .success-message {
+    color: green;
+    font-weight: bold;
+  }
+
+ /* Calendar Container */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Customize react-calendar */
+.react-calendar {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+}
+
+/* Header (month and arrows) */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.react-calendar__navigation button {
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #1e40af;
+}
+
+/* Weekday labels (make sure Sunday is visible) */
+.react-calendar__month-view__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  color: #374151;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+
+/* Individual days */
+.react-calendar__tile {
+  padding: 10px 0;
+  background: #eff6ff;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.2s ease;
+  margin: 2px;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: #93c5fd;
+  cursor: pointer;
+}
+
+.react-calendar__tile--now {
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+}
+
+.react-calendar__tile--active {
+  background: #1d4ed8 !important;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .react-calendar {
+    max-width: 95%;
+  }
+}
+
+  
+  /* 📌 Responsive Design */
+  @media (max-width: 1024px) {
+    .dashboard-container {
+      flex-direction: column;
+    }
+  
+    .content {
+      padding: 15px;
+    }
+  
+    .bookings-container {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .booking-form {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .booking-form input {
+      padding: 8px;
+    }
+  
+    .booking-form button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .booking-item {
+      padding: 10px;
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+      position: fixed;
+      height: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #2a5db0;
+    }
+  
+    .content {
+      padding: 20px;
+      margin-bottom: 60px; /* Space for the sidebar */
+    }
+  
+    .booking-item {
+      font-size: 12px;
+    }
+  }
+  

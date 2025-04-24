@@ -1,0 +1,66 @@
+.create-teacher-container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eef6ff;
+  }
+  
+  .create-teacher-container h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .create-teacher-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-teacher-form input {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .create-teacher-form button {
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .create-teacher-form button:hover {
+    background: #2980b9;
+  }
+
+  /* Back to Dashboard Button */
+.back-to-dashboard-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-dashboard-btn {
+    background-color: grey;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.back-to-dashboard-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .create-teacher-container {
+        width: 100%;
+    }
+}

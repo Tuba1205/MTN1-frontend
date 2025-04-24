@@ -1,0 +1,161 @@
+/* 🌟 General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🌟 Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* 🌟 Header */
+h2 {
+    color: #1e293b;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 🌟 Label Styles */
+label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+/* 🌟 Dropdown Styles */
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 14px;
+    transition: border 0.2s;
+}
+
+select:focus {
+    border-color: #1e293b;
+    outline: none;
+}
+
+/* 🌟 Slot Input Section */
+.slot-inputs {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.slot-inputs input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 45%;
+    transition: border 0.2s;
+}
+
+.slot-inputs input:focus {
+    border-color: teal;
+    outline: none;
+}
+
+/* 🌟 Add Slot Button */
+.slot-inputs button {
+    background: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.slot-inputs button:hover {
+    background: #005f56;
+    transform: scale(1.05);
+}
+
+/* 🌟 Available Slots Section */
+.slots-container {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 🌟 Slot Cards */
+.slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+    transition: background 0.2s ease-in-out;
+}
+
+/* ✅ Available Slot */
+.available {
+    border-left: 6px solid #28a745;
+}
+
+/* ❌ Booked Slot */
+.booked {
+    border-left: 6px solid #dc3545;
+    background: #ffe5e5;
+}
+
+/* 🚀 Delete Button */
+.delete-btn {
+    background: #dc3545;
+    justify-self: flex-end;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.delete-btn:hover {
+    background: #b52b3a;
+    transform: scale(1.05);
+}
+
+/* 🖥️ Responsive Design */
+@media (max-width: 600px) {
+    .slot-inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .slot-inputs input {
+        width: 100%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+}

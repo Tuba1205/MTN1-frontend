@@ -1,0 +1,59 @@
+.send-message-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar styling (assuming the AdminSidebar component) */
+.send-message-form .admin-sidebar {
+    flex: 0 0 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form input section */
+.send-message-input {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit button */
+.send-message-input button {
+    padding: 10px 20px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Back to Dashboard Button */
+.back-to-dashboard-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .back-to-dashboard-btn {
+    background-color: grey;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .back-to-dashboard-btn:hover {
+    background-color: #0056b3;
+  }
+  

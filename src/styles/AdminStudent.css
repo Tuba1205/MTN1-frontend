@@ -1,0 +1,174 @@
+/* Main Admin Dashboard Layout */
+.admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f4f4;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Sidebar Navigation */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 12px 0;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar Hover Effects */
+.sidebar ul li a:hover {
+    background: #34495e;
+    transform: translateX(5px);
+}
+
+/* Active Sidebar Link */
+.sidebar ul li a.active {
+    background: #1abc9c;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.admin-content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px;
+    background: #f8f9fa;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Heading Styles */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+th {
+    background: #1abc9c;
+    color: white;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+/* Back to Dashboard Button */
+.back-to-dashboard-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-dashboard-btn {
+    background-color: #6c757d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-to-dashboard-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .admin-content {
+        margin-left: 200px;
+        padding: 15px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .back-to-dashboard-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
+
+/* Collapsible Sidebar (For Future Enhancements) */
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar.collapsed ul li {
+    justify-content: center;
+}
+
+.sidebar.collapsed ul li a {
+    display: none;
+}

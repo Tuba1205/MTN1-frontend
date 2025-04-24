@@ -1,0 +1,128 @@
+/* Sidebar Styling - Compact & Modern */
+.sidebar {
+    width: 220px; /* Compact width */
+    height: 100vh;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 12px;
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Sidebar Menu Items */
+.sidebar ul li {
+    padding: 10px 14px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 6px;
+    margin: 4px 6px;
+    display: flex;
+    align-items: center;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+    color: #f8fafc;
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Hover Effects */
+.sidebar ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+/* Active Link */
+.sidebar ul li a.active {
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+/* Logout Button */
+.logout-button {
+    margin-top: auto;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    width: 90%;
+    text-align: left;
+    border-radius: 6px;
+}
+
+.logout-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #f87171;
+}
+
+/* Sidebar Logo */
+.sidebar-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.sidebar-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .sidebar ul li {
+        padding: 8px 12px;
+    }
+
+    .logout-button {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}
+
+/* Collapsible Sidebar (For future enhancements) */
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar.collapsed ul li {
+    justify-content: center;
+}
+
+.sidebar.collapsed ul li a {
+    display: none;
+}

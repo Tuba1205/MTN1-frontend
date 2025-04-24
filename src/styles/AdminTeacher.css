@@ -1,0 +1,79 @@
+/* Admin Teachers Container */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+/* Admin Teachers Section */
+.admin-teachers {
+    flex: 1;
+    padding: 20px;
+    margin-left: 260px; /* Adjust for sidebar width */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Section Heading */
+.admin-teachers h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1e293b;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header */
+thead {
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Table Cells */
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+/* Hover Effects */
+tbody tr:hover {
+    background-color: #eef2ff;
+    transition: background 0.2s ease-in-out;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .admin-teachers {
+        margin-left: 200px;
+        padding: 15px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Future Sidebar Collapsible Feature */
+.sidebar.collapsed + .admin-teachers {
+    margin-left: 80px;
+}

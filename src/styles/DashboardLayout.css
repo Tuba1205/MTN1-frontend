@@ -1,0 +1,29 @@
+/* DashboardLayout.css */
+.dashboard-container {
+    display: flex;  /* Using flexbox to align sidebar and content */
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  .dashboard-content {
+    flex: 1;  /* Main content takes the remaining space */
+    margin-left: 220px;  /* To avoid overlap with the sidebar */
+    padding: 20px;
+    background-color: #f5f5f5;  /* Light background for content */
+    overflow-y: auto;  /* Enable scrolling if content overflows */
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-container {
+      flex-direction: column; /* Stack sidebar and content on smaller screens */
+    }
+    
+    .dashboard-content {
+      margin-left: 0;  /* Remove left margin on smaller screens */
+    }
+  }
+ 
+  @media (max-width: 480px) {
+    .dashboard-content {
+      padding: 10px;  /* Adjust padding for smaller screens */
+    }
+  }

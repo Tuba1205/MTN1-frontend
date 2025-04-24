@@ -1,0 +1,113 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #0F172A;
+    color: #FFFFFF;
+    padding: 20px 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: width 0.3s ease-in-out;
+}
+
+/* Logo Styling */
+.sidebar-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #F8FAFC;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+    width: 90%;
+}
+
+.sidebar a:hover {
+    background: #1E293B;
+    color: #FFFFFF;
+}
+
+.sidebar a.active {
+    background: #2563EB;
+    color: #FFFFFF;
+}
+
+/* Sidebar Icons */
+.sidebar-icon {
+    margin-right: 12px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Logout Button */
+.sidebar .logout {
+    margin-top: auto;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+    width: 90%;
+    text-align: left;
+}
+
+.sidebar .logout:hover {
+    background: #DC2626;
+    color: #FFF;
+}
+.sidebar {
+    background-color: #0F172A !important;
+    color: white !important;
+    width: 250px !important;
+}
+
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        background: #1E293B;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+        padding: 8px 12px;
+        justify-content: center;
+    }
+
+    .sidebar-icon {
+        font-size: 18px;
+        margin-right: 0;
+    }
+
+    .logout {
+        display: none;
+    }
+}

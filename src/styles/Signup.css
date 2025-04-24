@@ -1,0 +1,88 @@
+/* Centering the signup box */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffffff; /* Plain white background */
+}
+
+/* Signup Box */
+.signup-box {
+    width: 350px;
+    padding: 30px;
+    background: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
+}
+
+/* Title */
+.signup-box h2 {
+    color: #333; /* Dark text */
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Input Fields */
+.signup-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Button */
+.signup-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #28a745; /* Green for Sign Up */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-box button:hover {
+    background: #218838;
+}
+
+/* Links */
+.signup-box .links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-box a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.signup-box a:hover {
+    text-decoration: underline;
+}
+.link {
+    color: #007bff; /* Blue color */
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+@media (max-width: 480px) {
+    .signup-box {
+        width: 300px;
+        padding: 20px;
+    }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import AdminSidebar from "../components/AdminSidebar";
-import "../styles/createUser.css";
+import "../styles/CreateUser.css";
 
 const CreateUser = () => {
   const navigate = useNavigate();

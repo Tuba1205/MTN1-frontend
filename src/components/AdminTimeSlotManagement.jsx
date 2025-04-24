@@ -17,7 +17,7 @@ const TeacherSlots = () => {
     // ✅ Fetch Teachers
     const fetchTeachers = async () => {
         try {
-            const response = await axios.get("http://localhost:4000/api/admin/teachers");
+            const response = await axios.get("https://mtn1-backend-production.up.railway.app/api/admin/teachers");
             setTeachers(response.data);
         } catch (error) {
             console.error("❌ Error fetching teachers:", error);
@@ -39,7 +39,7 @@ const TeacherSlots = () => {
             }
 
             const response = await axios.get(
-                `http://localhost:4000/api/admin/getTeacherAvailableSlots/${selectedTeacher}/${selectedDay}`,
+                `https://mtn1-backend-production.up.railway.app/api/admin/getTeacherAvailableSlots/${selectedTeacher}/${selectedDay}`,
                 {
                     headers: { Authorization: `Bearer ${token}` },
                 }
@@ -75,7 +75,7 @@ const TeacherSlots = () => {
             }
 
             const response = await axios.post(
-                "http://localhost:4000/api/admin/assignslot",
+                "https://mtn1-backend-production.up.railway.app/api/admin/assignslot",
                 {
                     teacherId: selectedTeacher,
                     day: selectedDay,
@@ -116,7 +116,7 @@ const TeacherSlots = () => {
           }
       
           // ✅ Send API Request
-          const response = await axios.delete("http://localhost:4000/api/admin/deleteslot", {
+          const response = await axios.delete("https://mtn1-backend-production.up.railway.app/api/admin/deleteslot", {
             data: { teacherId: selectedTeacher, day: selectedDay, startTime }, // 👈 Data as body
             headers: { Authorization: `Bearer ${token}` },
           });

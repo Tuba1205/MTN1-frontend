@@ -22,10 +22,10 @@ const SendMessageForm = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const teachersRes = await axios.get("http://localhost:4000/api/admin/teachers");
+                const teachersRes = await axios.get("https://mtn1-backend-production.up.railway.app/api/admin/teachers");
                 setTeachers(teachersRes.data);
 
-                const studentsRes = await axios.get("http://localhost:4000/api/admin/students");
+                const studentsRes = await axios.get("https://mtn1-backend-production.up.railway.app/api/admin/students");
                 setStudents(studentsRes.data);
             } catch (error) {
                 console.error("Error fetching users:", error);
@@ -71,7 +71,7 @@ const SendMessageForm = () => {
         }
       
         try {
-          const response = await axios.post("http://localhost:4000/api/messages/send", formDataObj, {
+          const response = await axios.post("https://mtn1-backend-production.up.railway.app/api/messages/send", formDataObj, {
             headers: { "Content-Type": "multipart/form-data" }
           });
       

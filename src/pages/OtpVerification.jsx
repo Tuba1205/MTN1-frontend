@@ -47,7 +47,7 @@ const OTPVerification = () => {
         console.log("Sending OTP verification request for email:", email);
   
         // Verify OTP request to backend API
-        const response = await axios.post('http://localhost:4000/api/auth/verify-otp', {
+        const response = await axios.post('https://mtn1-backend-production.up.railway.app/api/auth/verify-otp', {
           email,    // Include email in the request body
           otp: enteredOTP // Send the OTP entered by the user
         });

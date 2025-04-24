@@ -35,7 +35,7 @@ const CreateTeacher = () => {
             console.log("📌 Token:", token);
 
             const response = await axios.post(
-                "http://localhost:4000/api/admin/create-teacher",
+                "https://mtn1-backend-production.up.railway.app/api/admin/create-teacher",
                 teacherData,
                 {
                     headers: {

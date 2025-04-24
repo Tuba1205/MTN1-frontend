@@ -24,7 +24,7 @@ const TeacherProfile = () => {
             return;
         }
 
-        const response = await axios.get("http://localhost:4000/api/teachers/profile", {
+        const response = await axios.get("https://mtn1-backend-production.up.railway.app/api/teachers/profile", {
             headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -58,7 +58,7 @@ const TeacherProfile = () => {
         return;
       }
 
-      const response = await axios.put("http://localhost:4000/api/teachers/profile", formData, {
+      const response = await axios.put("https://mtn1-backend-production.up.railway.app/api/teachers/profile", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

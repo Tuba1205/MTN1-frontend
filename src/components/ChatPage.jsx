@@ -6,7 +6,7 @@ import "../styles/ChatPage.css";
 import "../styles/Sidebar.css";
 
 // ✅ WebSocket Connection
-const socket = io(import.meta.env.VITE_SOCKET_URL || "http://localhost:4000", {
+const socket = io(import.meta.env.VITE_SOCKET_URL || "https://mtn1-backend-production.up.railway.app", {
   transports: ["websocket"],
 });
 
@@ -163,7 +163,7 @@ const ChatPage = () => {
     };
   
     try {
-      const response = await fetch(`http://localhost:4000/api/messages/send`, {
+      const response = await fetch(`https://mtn1-backend-production.up.railway.app/api/messages/send`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(messageData),

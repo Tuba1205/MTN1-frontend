@@ -30,7 +30,7 @@ const BookingForm = ({ fetchBookings }) => {
     const dayOfWeek = selectedDate.toLocaleString("en-US", { weekday: "long" }).toLowerCase();
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/admin/getTeacherAvailableSlots/${teacherId}/${dayOfWeek}`,
+        `https://mtn1-backend-production.up.railway.app/api/admin/getTeacherAvailableSlots/${teacherId}/${dayOfWeek}`,
         { headers: getAuthHeaders() }
       );
 
@@ -79,7 +79,7 @@ const BookingForm = ({ fetchBookings }) => {
   
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/bookings/create",
+        "https://mtn1-backend-production.up.railway.app/api/bookings/create",
         payload,
         { headers: getAuthHeaders() }
       );

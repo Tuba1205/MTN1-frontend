@@ -17,7 +17,7 @@ const Signup = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/students/create", {
+      const response = await fetch("https://mtn1-backend-production.up.railway.app/api/students/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

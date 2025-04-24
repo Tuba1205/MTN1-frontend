@@ -12,7 +12,7 @@ const AdminStudents = () => {
     const fetchStudents = async () => {
       try {
         const token = localStorage.getItem("token"); // Get stored admin token
-        const response = await axios.get("http://localhost:4000/api/students/all", {
+        const response = await axios.get("https://mtn1-backend-production.up.railway.app/api/students/all", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

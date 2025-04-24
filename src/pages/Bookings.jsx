@@ -28,7 +28,7 @@ const Booking = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:4000/api/bookings", {
+      const response = await axios.get("https://mtn1-backend-production.up.railway.app/api/bookings", {
         headers: { Authorization: `Bearer ${token}` },
       });
 

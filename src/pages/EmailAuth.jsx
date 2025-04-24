@@ -12,7 +12,7 @@ const EmailAuth = () => {
     if (email.includes("@") && email.includes(".")) {
       try {
         // Send OTP request to the backend API
-        const response = await axios.post('http://localhost:4000/api/auth/send-otp', { email });
+        const response = await axios.post('https://mtn1-backend-production.up.railway.app/api/auth/send-otp', { email });
   
         // Handle response from the backend
         if (response.data.success) {

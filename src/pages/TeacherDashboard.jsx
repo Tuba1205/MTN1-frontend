@@ -13,7 +13,7 @@ const TeacherDashboard = () => {
         const token = localStorage.getItem("token");
         if (!token) throw new Error("Authentication token missing!");
 
-        const response = await fetch("http://localhost:4000/api/teachers/my-bookings", {
+        const response = await fetch("https://mtn1-backend-production.up.railway.app/api/teachers/my-bookings", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

@@ -17,7 +17,7 @@ const TeachersList = () => {
     setError(null);
 
     try {
-      const response = await axios.get("http://localhost:4000/api/teachers/all");
+      const response = await axios.get("https://mtn1-backend-production.up.railway.app/api/teachers/all");
       setTeachers(response.data);
     } catch (err) {
       setError("Failed to load teachers.");

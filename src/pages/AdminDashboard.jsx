@@ -19,7 +19,7 @@ const AdminDashboard = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:4000/api/admin/dashboard-stats", {
+        const response = await axios.get("https://mtn1-backend-production.up.railway.app/api/admin/dashboard-stats", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

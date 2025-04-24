@@ -29,7 +29,7 @@ const TeacherBookings = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:4000/api/teachers/my-bookings", {
+      const response = await axios.get("https://mtn1-backend-production.up.railway.app/api/teachers/my-bookings", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -94,7 +94,7 @@ const TeacherBookings = () => {
 
       // Make the API call to fetch available slots for the teacher on that day
       const res = await axios.get(
-        `http://localhost:4000/api/admin/getTeacherAvailableSlots/${teacherId}/${day}`,
+        `https://mtn1-backend-production.up.railway.app/api/admin/getTeacherAvailableSlots/${teacherId}/${day}`,
         { headers: getAuthHeaders() }
       );
 
@@ -139,7 +139,7 @@ const TeacherBookings = () => {
     
         // Send the PUT request to reschedule the booking
         const response = await axios.put(
-          `http://localhost:4000/api/bookings/${selectedBooking}/reschedule`,
+          `https://mtn1-backend-production.up.railway.app/api/bookings/${selectedBooking}/reschedule`,
           {
             selectedDate: formattedDate,  // Pass only the date and slot ID
             selectedSlotId,
@@ -180,7 +180,7 @@ const TeacherBookings = () => {
         return;
       }
 
-      await axios.delete(`http://localhost:4000/api/bookings/${bookingId}/cancel`, {
+      await axios.delete(`https://mtn1-backend-production.up.railway.app/api/bookings/${bookingId}/cancel`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

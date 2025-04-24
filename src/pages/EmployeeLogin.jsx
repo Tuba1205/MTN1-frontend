@@ -14,7 +14,7 @@ const EmployeeLogin = () => {
         setError(""); // Reset error message
 
         try {
-            const response = await axios.post("http://localhost:4000/api/auth/login", { email, password });
+            const response = await axios.post("https://mtn1-backend-production.up.railway.app/api/auth/login", { email, password });
 
             const { token, role, userId } = response.data;
 

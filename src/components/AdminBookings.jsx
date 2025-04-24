@@ -41,7 +41,7 @@ const AdminBooking = () => {
 
     const fetchTeachers = async () => {
         try {
-            const res = await axios.get("http://localhost:4000/api/admin/teachers", {
+            const res = await axios.get("https://mtn1-backend-production.up.railway.app/api/admin/teachers", {
                 headers: getAuthHeaders(),
             });
             setTeachers(res.data);
@@ -52,7 +52,7 @@ const AdminBooking = () => {
 
     const fetchStudents = async () => {
         try {
-            const res = await axios.get("http://localhost:4000/api/admin/students", {
+            const res = await axios.get("https://mtn1-backend-production.up.railway.app/api/admin/students", {
                 headers: getAuthHeaders(),
             });
             setStudents(res.data);
@@ -63,7 +63,7 @@ const AdminBooking = () => {
 
     const fetchBookings = async () => {
         try {
-            const res = await axios.get("http://localhost:4000/api/bookings", {
+            const res = await axios.get("https://mtn1-backend-production.up.railway.app/api/bookings", {
                 headers: getAuthHeaders(),
             });
             setBookings(res.data);
@@ -82,7 +82,7 @@ const AdminBooking = () => {
         const dayOfWeek = selectedDate.toLocaleString("en-US", { weekday: "long" }).toLowerCase(); // Get the day of the week from the selected date
         try {
             const res = await axios.get(
-                `http://localhost:4000/api/admin/getTeacherAvailableSlots/${selectedTeacher}/${dayOfWeek}`,
+                `https://mtn1-backend-production.up.railway.app/api/admin/getTeacherAvailableSlots/${selectedTeacher}/${dayOfWeek}`,
                 { headers: getAuthHeaders() }
             );
 
@@ -128,7 +128,7 @@ const AdminBooking = () => {
 
         try {
             const res = await axios.post(
-                "http://localhost:4000/api/admin/assign-class",
+                "https://mtn1-backend-production.up.railway.app/api/admin/assign-class",
                 payload,
                 { headers: getAuthHeaders() }
             );
@@ -169,7 +169,7 @@ const AdminBooking = () => {
           console.log(`📅 Fetching slots for Teacher ID: ${teacherId}, Day: ${day}`);
       
           const res = await axios.get(
-            `http://localhost:4000/api/admin/getTeacherAvailableSlots/${teacherId}/${day}`,
+            `https://mtn1-backend-production.up.railway.app/api/admin/getTeacherAvailableSlots/${teacherId}/${day}`,
             { headers: getAuthHeaders() }
           );
       
@@ -193,7 +193,7 @@ const rescheduleBooking = async (e) => {
 
     try {
         const response = await axios.put(
-            `http://localhost:4000/api/bookings/${selectedBooking}/reschedule`,
+            `https://mtn1-backend-production.up.railway.app/api/bookings/${selectedBooking}/reschedule`,
             {
                 selectedDate: formattedDate,
                 selectedSlotId,
@@ -234,7 +234,7 @@ const rescheduleBooking = async (e) => {
     const cancelBooking = async (bookingId) => {
         try {
             await axios.delete(
-                `http://localhost:4000/api/bookings/${bookingId}/cancel`,
+                `https://mtn1-backend-production.up.railway.app/api/bookings/${bookingId}/cancel`,
                 { headers: getAuthHeaders() }
             );
             alert("Booking Cancelled ✅");
@@ -252,7 +252,7 @@ const rescheduleBooking = async (e) => {
 
         try {
             await axios.put(
-                "http://localhost:4000/api/admin/update-class-status",
+                "https://mtn1-backend-production.up.railway.app/api/admin/update-class-status",
                 { bookingId, status: bookingUpdates[bookingId].status },
                 { headers: getAuthHeaders() }
             );
@@ -270,7 +270,7 @@ const rescheduleBooking = async (e) => {
 
         try {
             await axios.delete(
-                `http://localhost:4000/api/bookings/${bookingId}/delete`,
+                `https://mtn1-backend-production.up.railway.app/api/bookings/${bookingId}/delete`,
                 { headers: getAuthHeaders() }
             );
             alert("Booking Deleted ✅");

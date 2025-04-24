@@ -24,7 +24,7 @@ const Profile = () => {
                     return;
                 }
 
-                const response = await axios.get("http://localhost:4000/api/students/profile", {
+                const response = await axios.get("https://mtn1-backend-production.up.railway.app/api/students/profile", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
 
@@ -60,7 +60,7 @@ const Profile = () => {
 
         try {
             const response = await axios.put(
-                'http://localhost:4000/api/students/profile',
+                'https://mtn1-backend-production.up.railway.app/api/students/profile',
                 { name: student.name, email: student.email },
                 {
                     headers: {

@@ -20,7 +20,7 @@ const AdminMessages = () => {
         }
   
         const response = await axios.get(
-          `http://localhost:4000/api/messages/get/${adminId}/admin`,
+          `https://mtn1-backend-production.up.railway.app/api/messages/get/${adminId}/admin`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
   
@@ -78,7 +78,7 @@ const AdminMessages = () => {
                   {/* File Attachment Check */}
                   <td>
                     {msg.fileUrl && msg.fileUrl !== "null" ? (
-                      <a href={`http://localhost:4000/${msg.fileUrl}`} target="_blank" rel="noopener noreferrer">
+                      <a href={`https://mtn1-backend-production.up.railway.app/${msg.fileUrl}`} target="_blank" rel="noopener noreferrer">
                         📎 View File
                       </a>
                     ) : (

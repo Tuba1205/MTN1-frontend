@@ -82,64 +82,6 @@
     color: #555;
   }
   
-  /* 🧭 Hamburger Menu */
-.teacher-hamburger {
-  display: none;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 24px;
-  color: #192a56;
-  z-index: 1100;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .teacher-hamburger {
-    display: block;
-  }
-}
-
-/* Sidebar Wrapper */
-.teacher-sidebar {
-  width: 250px;
-  background: #192a56;
-  color: white;
-  padding: 20px;
-  position: fixed;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  transition: transform 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.teacher-sidebar.collapsed {
-  transform: translateX(-100%);
-}
-
-.teacher-sidebar.open {
-  transform: translateX(0);
-}
-
-/* Main Content Shift */
-.main-content {
-  flex: 1;
-  padding: 20px;
-  margin-left: 250px;
-  transition: margin-left 0.3s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    margin-left: 0;
-  }
-
-  .main-content.shifted {
-    margin-left: 250px;
-  }
-}
-
   @media (max-width: 768px) {
     .class-grid {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

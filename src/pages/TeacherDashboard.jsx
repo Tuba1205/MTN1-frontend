@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import TeacherSidebar from "../components/TeacherSidebar";
-import { FaBars } from "react-icons/fa";
-import "../styles/TeacherDashboard.css";
+import "../styles/TeacherDashboard.css"; // Import the external CSS file
 
 const TeacherDashboard = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   useEffect(() => {
     const fetchBookings = async () => {
@@ -15,12 +13,9 @@ const TeacherDashboard = () => {
         const token = localStorage.getItem("token");
         if (!token) throw new Error("Authentication token missing!");
 
-        const response = await fetch(
-          "https://mtn1-backend-production.up.railway.app/api/teachers/my-bookings",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
+        const response = await fetch("https://mtn1-backend-production.up.railway.app/api/teachers/my-bookings", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
 
         if (!response.ok) throw new Error("Failed to fetch bookings. Please try again!");
 
@@ -38,20 +33,14 @@ const TeacherDashboard = () => {
 
   return (
     <div className="teacher-dashboard">
-      {/* Toggle Button */}
-      <div className="teacher-hamburger" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-        <FaBars />
-      </div>
-
       {/* Sidebar */}
-      <div className={`teacher-sidebar ${isSidebarOpen ? "open" : "collapsed"}`}>
-        <TeacherSidebar />
-      </div>
+      <TeacherSidebar />
 
       {/* Main Content */}
-      <div className={`main-content ${isSidebarOpen ? "shifted" : ""}`}>
+      <div className="main-content">
         <h1>📚 Welcome to Teacher Dashboard</h1>
 
+        {/* 🔄 Loading State */}
         {loading && (
           <div className="loading-container">
             <div className="spinner"></div>
@@ -59,12 +48,14 @@ const TeacherDashboard = () => {
           </div>
         )}
 
+        {/* ❌ Error State */}
         {error && (
           <div className="error-card">
             <p>⚠️ {error}</p>
           </div>
         )}
 
+        {/* 📅 Upcoming Classes Section */}
         <div className="class-container">
           <h2>📅 Your Upcoming Classes</h2>
           {bookings.length === 0 && !loading && !error ? (
@@ -88,6 +79,7 @@ const TeacherDashboard = () => {
                 );
               })}
             </div>
+
           )}
         </div>
       </div>

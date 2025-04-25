@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import AdminSidebar from "../components/AdminSidebar";
-import { FaBars } from "react-icons/fa"; // Import hamburger icon
-import "../styles/AdminDashboard.css";
+import AdminSidebar from "../components/AdminSidebar"; // Import Sidebar component
+import "../styles/AdminDashboard.css"; // Ensure this CSS file exists
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState({
@@ -11,23 +10,18 @@ const AdminDashboard = () => {
     totalBookings: 0,
   });
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const token = localStorage.getItem("token");
+        const token = localStorage.getItem("token"); // Admin token
         if (!token) {
           console.error("No token found. Please log in.");
           return;
         }
 
-        const response = await axios.get(
-          "https://mtn1-backend-production.up.railway.app/api/admin/dashboard-stats",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
+        const response = await axios.get("https://mtn1-backend-production.up.railway.app/api/admin/dashboard-stats", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
 
         setStats(response.data);
       } catch (error) {
@@ -40,18 +34,8 @@ const AdminDashboard = () => {
 
   return (
     <div className="admin-dashboard">
-      {/* Hamburger Toggle Button (visible on small screens) */}
-      <div className="admin-hamburger" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-        <FaBars />
-      </div>
-
-      {/* Sidebar with toggleable class */}
-      <div className={`admin-sidebar ${isSidebarOpen ? "open" : "collapsed"}`}>
-        <AdminSidebar />
-      </div>
-
-      {/* Main Dashboard Content */}
-      <div className={`main-content ${isSidebarOpen ? "shifted" : ""}`}>
+      <AdminSidebar /> {/* Sidebar */}
+      <div className="main-content">
         <h1>Welcome to Admin Dashboard</h1>
         <div className="dashboard-cards">
           <div className="card">

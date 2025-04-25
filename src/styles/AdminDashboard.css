@@ -240,6 +240,10 @@ h1 {
       max-width: 90%;
   }
 }
+.admin-sidebar.collapsed .sidebar-text {
+  display: none;
+}
+
 
 /* Mobile Sidebar */
 @media (max-width: 480px) {
